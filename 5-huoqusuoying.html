@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button class='btn'>测试</button>
+	<button class='btn'>测试</button>
+	<button class='btn'>测试</button>
+	<button class='btn'>测试</button>
+	<button class='btn'>测试</button>
+
+	<script src="jquery.js"></script>
+	<script>
+		$('.btn').click(function(){
+
+			var picSrc = [
+				'images/zero.jpg',
+				'images/one.jpg',
+				'images/two.jpg',
+				'images/three.jpg',
+				'images/four.jpg'
+			]
+
+			console.log(picSrc[3]);
+
+		})
+	</script>
+</body>
+</html>

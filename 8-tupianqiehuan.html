@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.numberlist li{
+			list-style: none;
+			width: 30px;
+			height: 30px;
+			border:1px solid blue;
+			line-height: 30px;
+			text-align: center;
+			float: left;
+			cursor:pointer;
+		}
+	</style>
+</head>
+<body>
+	<img class="pic" src="images/1.jpg" alt="">
+	<ul class="numberlist">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+
+	<script src="jquery.js"></script>
+	<script>
+		$('.numberlist li').click(function(){
+
+			var ind = $(this).index();   //获取点击元素的索引
+
+			var picSrc = [
+				'images/zero.jpg',
+				'images/one.jpg',
+				'images/two.jpg',
+				'images/three.jpg',
+				'images/four.jpg'
+			]
+
+			var mysrc = picSrc[ind];     //获取点击按钮对应的url
+
+			$('.pic').attr('src',mysrc);
+		})
+	</script>
+</body>
+</html>

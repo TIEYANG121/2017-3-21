@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		
+
+
+		.box{
+			width: 100px;
+			height: 100px;
+			background-color: #eee;
+		}
+
+		.blue{
+			background-color: #00f;
+		}
+
+		.red{
+			background-color: #f00;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	<button class="red">红</button>
+	<button class="blue">蓝</button>
+
+	<script src="jquery.js"></script>
+	<script>
+		// $('.box').click(function(){
+		// 	// $('.box').removeClass('active');
+		// 	$('.box').toggleClass('active');
+		// })
+
+		$('.red').click(function(e){
+			$('.box').removeClass('blue');
+			$('.box').addClass('red');
+			e.stopPropagation();
+		});
+
+		$('.blue').click(function(e){
+			$('.box').removeClass('red');
+			$('.box').addClass('blue');
+			e.stopPropagation();
+		})
+
+		$('body').click(function(){
+			$('.box').removeClass('red');
+			$('.box').removeClass('blue');
+		})
+
+	</script>
+</body>
+</html>
